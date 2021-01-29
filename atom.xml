@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-27T07:27:39.068Z</updated>
+  <updated>2021-01-29T11:10:55.003Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php学习三</title>
+    <link href="http://example.com/2021/01/29/php%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
+    <id>http://example.com/2021/01/29/php%E5%AD%A6%E4%B9%A0%E4%B8%89/</id>
+    <published>2021-01-29T08:19:24.000Z</published>
+    <updated>2021-01-29T11:10:55.003Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、PHP类型比较<br>（1）松散比较：使用两个等号 == 比较，只比较值，不比较类型；<br>（2）严格比较：用三个等号 === 比较，除了比较值，也比较类型。</p><p>二、PHP中比较0、false、null、””、”0”<br>对于 【0 ；’0’ ；’’ ；null； false】五种类型</p><p>empty操作以上五个变量，都返回false</p><p>强等于(===)比较 都为false，同强语言结果(三个等号比较不但要比较值，而且要比较类型)</p><p>但对于(==)比较，需要注意string类型，涉及到底层结构与类型转换</p><p>结论一：关于变量类型的理解</p><p>1.null为不存在之意：php底层的zval空间里（结构见下方）没有存其value值，只存储了一个type标志其 IS_NULL(所以解释了 empty(null)=true，isset(null)=false ，isset(‘’)=true)</p><p>2.【0 ; ‘0’ ; ‘’ ; false 】：这四个为存在，php底层是开辟zval空间存储，有value,有type</p><p>结论二：</p><p>1、string ‘0’与 string ‘’ 不相等,（想一下就明白，同类型比较【1个长度】的字符串怎么可能 等于 【0个长度】 的字符串）</p><p>2、int 0 却和 string ‘’ 空相等,（非同类形比较，php会做类型转换）</p><p>3、string ‘0’ 与 null 不相等，int 0 与 null 相等</p><p>三、PHP常量<br>    常量是一个简单值的标识符。该值在脚本中不能改变。<br>    一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)。<br>    注意： 常量在整个脚本中都可以使用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一、PHP类型比较&lt;br&gt;（1）松散比较：使用两个等号 == 比较，只比较值，不比较类型；&lt;br&gt;（2）严格比较：用三个等号 === 比较，除了比较值，也比较类型。&lt;/p&gt;
+&lt;p&gt;二、PHP中比较0、false、null、””、”0”&lt;br&gt;对于 【0 ；’0’ ；’’ ；</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php学习二</title>
