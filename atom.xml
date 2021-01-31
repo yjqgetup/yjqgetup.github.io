@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-29T11:10:55.003Z</updated>
+  <updated>2021-01-31T12:20:08.789Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>php学习四</title>
+    <link href="http://example.com/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/"/>
+    <id>http://example.com/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/</id>
+    <published>2021-01-31T08:29:27.000Z</published>
+    <updated>2021-01-31T12:20:08.789Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、字符串<br>1、PHP中的字符串变量<br>（1）字符串变量用于包含有字符的值</p><p>（2）可以直接在函数中使用字符串，或者把它储存在变量中</p><p>2、PHP 并置运算符（.）<br>作用：用于把两个字符串值连接起来</p><p>3、PHP strlen（）函数<br>作用：返回字符串的长度（字节数）。</p><p>4、PHP strpos（）函数<br>作用：用于在字符串内查找一个字符或一段指定的文本。<br>          如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。</p><p>二、运算符<br>1、算术运算符<br>x + y        加                     x 和 y 的和<br>x - y        减                     x 和 y 的差<br>x * y        乘                     x 和 y 的积<br>x / y        除                     x 和 y 的商<br>x % y        模（除法的余数）     x 除以 y 的余数<br>-x                取反                         x取反<br>a . b        并置                     连接两个字符串 </p><p>2、赋值运算符<br>x = y        x = y                      左操作数被设置为右侧表达式的值<br>x += y        x = x + y      加<br>x -= y        x = x - y                 减<br>x *= y        x = x * y      乘<br>x /= y        x = x / y      除<br>x %= y        x = x % y      模（除法的余数）<br>a .= b        a = a . b      连接两个字符串</p><p>3、递增运算符<br>++ x        预递增                      x 加 1，然后返回 x<br>x ++        后递增                      返回 x，然后 x 加 1<br>– x        预递减                      x 减 1，然后返回 x<br>x –        后递减                      返回 x，然后 x 减 1</p><p>4、比较运算符<br>x == y        等于                     如果 x 等于 y，则返回 true<br>x === y        绝对等于     如果 x 等于 y，且它们类型相同，则返回 true<br>x != y        不等于                     如果 x 不等于 y，则返回 true<br>x &lt;&gt; y        不等于                     如果 x 不等于 y，则返回 true<br>x !== y        绝对不等于     如果 x 不等于 y，或它们类型不相同，则返回 true<br>x &gt; y        大于                     如果 x 大于 y，则返回 true<br>x &lt; y        小于                     如果 x 小于 y，则返回 true<br>x &gt;= y        大于等于     如果 x 大于或者等于 y，则返回 true<br>x &lt;= y         小于等于     如果 x 小于或者等于 y，则返回 true     </p><p>5、逻辑运算符<br>x and y        与                     如果 x 和 y 都为 true，则返回 true<br>x or y        或                     如果 x 和 y 至少有一个为 true，则返回 true<br>x xor y        异或                     如果 x 和 y 有且仅有一个为 true，则返回 true<br>x &amp;&amp; y        与                     如果 x 和 y 都为 true，则返回 true<br>x || y        或                     如果 x 和 y 至少有一个为 true，则返回 true<br>! x        非                     如果 x 不为 true，则返回 true     x=6</p><p>6、数组运算符<br>x + y        集合                     x 和 y 的集合<br>x == y        相等                     如果 x 和 y 具有相同的键/值对，则返回 true<br>x === y        恒等                     如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true<br>x != y        不相等                     如果 x 不等于 y，则返回 true<br>x &lt;&gt; y        不相等                   如果 x 不等于 y，则返回 true<br>x !== y        不恒等                       如果 x 不等于 y，则返回 true</p><p>7、三元运算符<br>(expr1) ? (expr2) : (expr3)<br>对 expr1 求值为 TRUE 时的值为 expr2，在 expr1 求值为 FALSE 时的值为 expr3。</p><p>8、组合比较符<br>$c = $a &lt;=&gt; $b;<br>解析如下：<br>    如果 $a &gt; $b, 则 $c 的值为 1。<br>    如果 $a == $b, 则 $c 的值为 0。<br>    如果 $a &lt; $b, 则 $c 的值为 -1。</p><p>9、运算符优先级<br>无        clone new      clone 和 new<br>左        [                    array()<br>右        ++ – ~ (int) (float) (string) (array) (object) (bool) @     类型和递增／递减<br>无        instanceof      类型<br>右        !                    逻辑运算符<br>左        * / %         算术运算符<br>左        + – .          算术运算符和字符串运算符<br>左        &lt;&lt; &gt;&gt;      位运算符<br>无        == != === !== &lt;&gt;     比较运算符<br>左        &amp;                    位运算符和引用<br>左        ^                    位运算符<br>左                |                   位运算符<br>左        &amp;&amp;                    逻辑运算符<br>左        ||                    逻辑运算符<br>左        ? :                    三元运算符<br>右        = += -= *= /= .= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;= =&gt;     赋值运算符<br>左        and                    逻辑运算符<br>左        xor                    逻辑运算符<br>左        or                    逻辑运算符<br>左        ,                    多处用到</p><p>————————————————————————————————————————————————————————————————————————————<br>学习笔记补充：<br>1、intdiv()函数<br>    作用：返回值为第一个参数除于第二个参数的值并取整（向下取整）<br>2、isset()函数<br>    作用：用于检测变量是否已设置并且非NULL。如果已经使用unset（）释放了一个变量之后，再通过isset（）判断将返回FALSE。<br>3、PHP_EOL 是一个换行符，兼容更大平台。<br>4、=&gt;,-&gt;的意思和用法：<br>（1）意思:<br>（a）-&gt;是对象执行方法或取得属性用的。<br>（b）=&gt;是数组里键和值对应用的。（左侧表示键，右侧表示值）</p><p>（2）用法<br>（a）=&gt; 的用法数组中用于数组的 key 和 value之间的关系例如：<br>$a = array(‘0’ =&gt; ‘1’,’2’ =&gt; ‘4’,);echo $a[‘0’];echo $a[‘2’];<br>（b）-&gt; 的用法类中用于引用类实例的方法和属性例如：<br>class Test{function add(){return $this-&gt;var++;}var $var = 0;}$a = new Test;<br>//实例化对象名称</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一、字符串&lt;br&gt;1、PHP中的字符串变量&lt;br&gt;（1）字符串变量用于包含有字符的值&lt;/p&gt;
+&lt;p&gt;（2）可以直接在函数中使用字符串，或者把它储存在变量中&lt;/p&gt;
+&lt;p&gt;2、PHP 并置运算符（.）&lt;br&gt;作用：用于把两个字符串值连接起来&lt;/p&gt;
+&lt;p&gt;3、PHP strl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>php学习三</title>
     <link href="http://example.com/2021/01/29/php%E5%AD%A6%E4%B9%A0%E4%B8%89/"/>
     <id>http://example.com/2021/01/29/php%E5%AD%A6%E4%B9%A0%E4%B8%89/</id>
     <published>2021-01-29T08:19:24.000Z</published>
-    <updated>2021-01-29T11:10:55.003Z</updated>
+    <updated>2021-01-31T08:26:07.045Z</updated>
     
-    <content type="html"><![CDATA[<p>一、PHP类型比较<br>（1）松散比较：使用两个等号 == 比较，只比较值，不比较类型；<br>（2）严格比较：用三个等号 === 比较，除了比较值，也比较类型。</p><p>二、PHP中比较0、false、null、””、”0”<br>对于 【0 ；’0’ ；’’ ；null； false】五种类型</p><p>empty操作以上五个变量，都返回false</p><p>强等于(===)比较 都为false，同强语言结果(三个等号比较不但要比较值，而且要比较类型)</p><p>但对于(==)比较，需要注意string类型，涉及到底层结构与类型转换</p><p>结论一：关于变量类型的理解</p><p>1.null为不存在之意：php底层的zval空间里（结构见下方）没有存其value值，只存储了一个type标志其 IS_NULL(所以解释了 empty(null)=true，isset(null)=false ，isset(‘’)=true)</p><p>2.【0 ; ‘0’ ; ‘’ ; false 】：这四个为存在，php底层是开辟zval空间存储，有value,有type</p><p>结论二：</p><p>1、string ‘0’与 string ‘’ 不相等,（想一下就明白，同类型比较【1个长度】的字符串怎么可能 等于 【0个长度】 的字符串）</p><p>2、int 0 却和 string ‘’ 空相等,（非同类形比较，php会做类型转换）</p><p>3、string ‘0’ 与 null 不相等，int 0 与 null 相等</p><p>三、PHP常量<br>    常量是一个简单值的标识符。该值在脚本中不能改变。<br>    一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)。<br>    注意： 常量在整个脚本中都可以使用。</p>]]></content>
+    <content type="html"><![CDATA[<p>一、PHP类型比较<br>（1）松散比较：使用两个等号 == 比较，只比较值，不比较类型；<br>（2）严格比较：用三个等号 === 比较，除了比较值，也比较类型。</p><p>二、PHP中比较0、false、null、””、”0”<br>对于 【0 ；’0’ ；’’ ；null； false】五种类型</p><p>empty操作以上五个变量，都返回false</p><p>强等于(===)比较 都为false，同强语言结果(三个等号比较不但要比较值，而且要比较类型)</p><p>但对于(==)比较，需要注意string类型，涉及到底层结构与类型转换</p><p>结论一：关于变量类型的理解</p><p>1.null为不存在之意：php底层的zval空间里（结构见下方）没有存其value值，只存储了一个type标志其 IS_NULL(所以解释了 empty(null)=true，isset(null)=false ，isset(‘’)=true)</p><p>2.【0 ; ‘0’ ; ‘’ ; false 】：这四个为存在，php底层是开辟zval空间存储，有value,有type</p><p>结论二：</p><p>1、string ‘0’与 string ‘’ 不相等,（想一下就明白，同类型比较【1个长度】的字符串怎么可能 等于 【0个长度】 的字符串）</p><p>2、int 0 却和 string ‘’ 空相等,（非同类形比较，php会做类型转换）</p><p>3、string ‘0’ 与 null 不相等，int 0 与 null 相等</p><p>三、PHP常量<br>    常量是一个简单值的标识符。该值在脚本中不能改变。<br>    一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)。<br>    注意： 常量在整个脚本中都可以使用。</p><p>define()函数语法如下：<br>bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )<br>该函数有三个参数：<br>    name：必选参数，常量名称，即标志符。<br>    value：必选参数，常量的值。<br>    case_insensitive ：可选参数，如果设置为 TRUE，该常量则大小写不敏感。默认是大小写敏感的。</p>]]></content>
     
     
       
