@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="John Doe"><meta name="renderer" content="webkit"><meta name="copyright" content="John Doe"><meta name="keywords" content="Hexo"><meta name="description" content=""><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>php学习五 · Mr.Long's Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
+  "use strict";
+  // rel=preload support test
+  if( !w.loadCSS ){
+    w.loadCSS = function(){};
+  }
+  // define on the loadCSS obj
+  var rp = loadCSS.relpreload = {};
+  // rel=preload feature support test
+  // runs once and returns a function for compat purposes
+  rp.support = (function(){
+    var ret;
+    try {
+      ret = w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      ret = false;
+    }
+    return function(){
+      return ret;
+    };
+  })();
+
+  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+  // then change that media back to its intended value on load
+  rp.bindMediaToggle = function( link ){
+    // remember existing media attr for ultimate state, or default to 'all'
+    var finalMedia = link.media || "all";
+
+    function enableStylesheet(){
+      link.media = finalMedia;
+    }
+
+    // bind load handlers to enable media
+    if( link.addEventListener ){
+      link.addEventListener( "load", enableStylesheet );
+    } else if( link.attachEvent ){
+      link.attachEvent( "onload", enableStylesheet );
+    }
+
+    // Set rel and non-applicable media type to start an async request
+    // note: timeout allows this to happen async to let rendering continue in IE
+    setTimeout(function(){
+      link.rel = "stylesheet";
+      link.media = "only x";
+    });
+    // also enable media after 3 seconds,
+    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+    setTimeout( enableStylesheet, 3000 );
+  };
+
+  // loop through link elements in DOM
+  rp.poly = function(){
+    // double check this to prevent external calls from running
+    if( rp.support() ){
+      return;
+    }
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      // qualify links to those with rel=preload and as=style attrs
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+        // prevent rerunning on link
+        link.setAttribute( "data-loadcss", true );
+        // bind listeners to toggle media back
+        rp.bindMediaToggle( link );
+      }
+    }
+  };
+
+  // if unsupported, run the polyfill
+  if( !rp.support() ){
+    // run once at least
+    rp.poly();
+
+    // rerun poly on an interval until onload
+    var run = w.setInterval( rp.poly, 500 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    } else if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+  }
+
+
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/cat.png"></div><!--.profile-saying
+  i.fa.fa-comment
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">longlongyu</div><div class="profile-signature">for me</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/Longlongyu" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/index-bg.png);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">Mr.Long's Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">php学习五</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-calendar"></i><span>2021-02-01</span></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><p>一、If…Else 语句<br>    if 语句 - 在条件成立时执行代码<br>    if…else 语句 - 在条件成立时执行一块代码，条件不成立时执行另一块代码<br>    if…elseif….else 语句 - 在若干条件之一成立时执行一个代码块<br>    switch 语句 - 在若干条件之一成立时执行一个代码块</p>
+<p>二、数组<br>定义：数组是一个能在单个变量中储存多个值的特殊变量。<br>在PHP中，array（）用于创建数组。</p>
+<p>有三种类型的数组：<br>    数值数组 - 带有数字 ID 键的数组<br>    关联数组 - 带有指定的键的数组，每个键关联一个值<br>    多维数组 - 包含一个或多个数组的数组</p>
+<p>1、数值数组<br>这里有两种创建数值数组的方法：<br>（1）自动分配 ID 键（ID 键总是从 0 开始）：<br>$cars=array(“Volvo”,”BMW”,”Toyota”);<br>（2）人工分配 ID 键：<br>$cars[0]=”Volvo”;<br>$cars[1]=”BMW”;<br>$cars[2]=”Toyota”;<br>注意：数组前后需要用点号隔开</p>
+<p>2、关联数组<br>关联数组是使用您分配给数组的指定的键的数组。<br>这里有两种创建关联数组的方法：<br>（1）$age=array(“Peter”=&gt;”35”,”Ben”=&gt;”37”,”Joe”=&gt;”43”);</p>
+<p>（2）$age[‘Peter’]=”35”;<br>         $age[‘Ben’]=”37”;<br>         $age[‘Joe’]=”43”; </p>
+<p>三、数组排序<br>1、sort()函数<br>作用：对数组进行升序排列<br>（1）最终输出必须用print_r();<br>（2）字母或数字都是按从小到大的顺序排列的</p>
+<p>2、rsort()函数<br>作用：对数组进行降序排序<br>（1）最终输出必须用print_r();<br>（2）字母或数字都是按从大到小的顺序排列的</p>
+<p>3、asort()函数<br>作用：根据数组的值，对数组进行升序排列<br>（1）最终输出必须用print_r();<br>（2）按值的字母或数字从小到大的顺序排列</p>
+<p>4、arsort()函数<br>作用：根据数组的值，对数组进行降序排列<br>（1）最终输出必须用print_r();<br>（2）按值的字母或数字从大到小的顺序排列</p>
+<p>5、ksort()函数<br>作用：根据数组的键，对数组进行升序排列<br>（1）最终输出必须用print_r();<br>（2）按照键的字母或数字从小到大排序</p>
+<p>6、krsort()函数<br>作用： 根据数组的键，对数组进行降序排列<br>（1）最终输出必须用print_r();<br>（2）按照键的字母或数字从大到小排序<br>———————————————————————————————<br>学习笔记补充：<br>1、date()函数<br>a - “am” 或是 “pm”；<br> A - “AM” 或是 “PM”；<br> D - 星期几，三个英文字母; 如: “Fri”；<br> F - 月份，英文全名; 如: “January”；<br> h - 12 小时制的小时; 如: “01” 至 “12”；<br> g - 12 小时制的小时，不足二位不补零; 如: “1” 至 12”；<br> G - 24 小时制的小时，不足二位不补零; 如: “0” 至 “23”；<br> j - 几日，二位数字，若不足二位不补零; 如: “1” 至 “31”；<br> l - 星期几，英文全名; 如: “Friday”；<br> n - 月份，二位数字，若不足二位则不补零; 如: “1” 至 “12”；<br>m - 分钟，二位数字，若不足二位则补零；如：”01” 至 “60”;<br> M - 月份，三个英文字母; 如: “Jan”；<br> S - 字尾加英文序数，二个英文字母; 如: “th”，”nd”；<br> t - 指定月份的天数; 如: “28” 至 “31”；<br> U - 总秒数；<br> w - 数字型的星期几，如: “0” (星期日) 至 “6” (星期六)；<br> y - 年，二位数字; 如: “99”；<br> z - 一年中的第几天; 如: “0” 至 “365”。</p>
+<p>2、count()函数<br>作用：用于返回数组的长度（元素的数量）</p>
+<p>3、print_r()函数<br>作用：用于打印变量，以更容易理解的形式展示<br>注：可用于数组内部排序</p>
+</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="http://example.com">John Doe</a></p><p> <span>Link:  </span><a href="http://example.com/2021/02/01/php%E5%AD%A6%E4%B9%A0%E4%BA%94/">http://example.com/2021/02/01/php%E5%AD%A6%E4%B9%A0%E4%BA%94/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/3.0">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="nextSlogan" href="/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/" title="php学习四"><span>NextPost ></span><br><span class="nextTitle">php学习四</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span> | theme </span><a target="_blank" rel="noopener" href="https://github.com/Longlongyu/hexo-theme-Cxo"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
