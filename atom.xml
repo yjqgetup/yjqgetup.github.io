@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-01T07:04:46.590Z</updated>
+  <updated>2021-02-03T07:08:59.540Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>php学习六</title>
+    <link href="http://example.com/2021/02/03/php%E5%AD%A6%E4%B9%A0%E5%85%AD/"/>
+    <id>http://example.com/2021/02/03/php%E5%AD%A6%E4%B9%A0%E5%85%AD/</id>
+    <published>2021-02-03T06:09:21.000Z</published>
+    <updated>2021-02-03T07:08:59.540Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、循环<br>    while - 只要指定的条件成立，则循环执行代码块<br>    do…while - 首先执行一次代码块，然后在指定的条件成立时重复这个循环<br>    for - 循环执行代码块指定的次数<br>    foreach - 根据数组中每个元素来循环代码块</p><p>1、while循环<br>语法：<br>    while (条件)<br>    {<br>        要执行的代码;<br>    }</p><p>2、do while循环<br>语法：<br>    do<br>    {<br>        要执行的代码;<br>    }<br>    while (条件);</p><p>3、for循环<br>语法：<br>    for (初始值; 条件; 增量)<br>    {<br>        要执行的代码;<br>    }<br>参数：<br>    初始值：主要是初始化一个变量值，用于设置一个计数器（但可以是任何在循环的开始被执行一次的代码）。<br>    条件：循环执行的限制条件。如果为 TRUE，则循环继续。如果为 FALSE，则循环结束。<br>    增量：主要用于递增计数器（但可以是任何在循环的结束被执行的代码）。<br>注释：上面的初始值和增量参数可为空，或者有多个表达式（用逗号分隔）。</p><p> 4、foreach循环<br>语法：<br>（1）<br>    foreach ($array as $value)<br>    {<br>        要执行代码;<br>    }<br>（2）<br>    foreach ($array as $key =&gt; $value)<br>    {<br>        要执行代码;<br>    }</p><p>补充：冒泡循环<br>输入：<br><?php$arr = array(5,3,6,2,8,10);for($i = count($arr)-1;$i>=0;$i--){    for($j = 0 ; $j < $i ; $j++){        if($arr[$j+1] > $arr[$j] ){            $aa = $arr[$j+1];            $arr[$j+1] = $arr[$j];            $arr[$j] = $aa;        }    }}print_r($arr);?><br>输出：<br>Array<br>(<br>    [0] =&gt; 10<br>    [1] =&gt; 8<br>    [2] =&gt; 6<br>    [3] =&gt; 5<br>    [4] =&gt; 3<br>    [5] =&gt; 2<br>)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一、循环&lt;br&gt;    while - 只要指定的条件成立，则循环执行代码块&lt;br&gt;    do…while - 首先执行一次代码块，然后在指定的条件成立时重复这个循环&lt;br&gt;    for - 循环执行代码块指定的次数&lt;br&gt;    foreach - 根据数组中每个元素</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php学习五</title>
