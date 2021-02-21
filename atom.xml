@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-05T10:12:52.124Z</updated>
+  <updated>2021-02-21T11:07:43.537Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql学习一</title>
+    <link href="http://example.com/2021/02/21/mysql%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
+    <id>http://example.com/2021/02/21/mysql%E5%AD%A6%E4%B9%A0%E4%B8%80/</id>
+    <published>2021-02-21T10:06:14.000Z</published>
+    <updated>2021-02-21T11:07:43.537Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、MySQL管理<br>1、在phpstudy中启动MySQL（Windows系统）<br>步骤1：在MySQL文件中打开bin文件，然后打开命令窗口（cmd）输入：<br>    mysql -u root -p<br>步骤2：在上述步骤后会跳出一个password，然后输入<br>    root（默认密码）</p><p>二、MySQL创建用户与授权<br>1、创建用户<br>命令:</p><p>CREATE USER ‘username’@’host’ IDENTIFIED BY ‘password’;</p><p>说明：</p><pre><code>username：你将创建的用户名host：指定该用户在哪个主机上可以登陆，如果是本地用户可用localhost，如果想让该用户可以从任意远程主机登陆，可以使用通配符%password：该用户的登陆密码，密码可以为空，如果为空则该用户可以不需要密码登陆服务器</code></pre><p>例子：</p><p>CREATE USER ‘dog’@’localhost’ IDENTIFIED BY ‘123456’;<br>CREATE USER ‘pig’@’192.168.1.101_’ IDENDIFIED BY ‘123456’;<br>CREATE USER ‘pig’@’%’ IDENTIFIED BY ‘123456’;<br>CREATE USER ‘pig’@’%’ IDENTIFIED BY ‘’;<br>CREATE USER ‘pig’@’%’;</p><p>2、授权<br>命令:</p><p>GRANT privileges ON databasename.tablename TO ‘username’@’host’</p><p>说明:</p><pre><code>privileges：用户的操作权限，如SELECT，INSERT，UPDATE等，如果要授予所的权限则使用ALLdatabasename：数据库名tablename：表名，如果要授予该用户对所有数据库和表的相应操作权限则可用*表示，如*.*</code></pre><p>例子:</p><p>GRANT SELECT, INSERT ON test.user TO ‘pig’@’%’;<br>GRANT ALL ON <em>.</em> TO ‘pig’@’%’;<br>GRANT ALL ON maindataplus.* TO ‘pig’@’%’;</p><p>注意:</p><p>用以上命令授权的用户不能给其它用户授权，如果想让该用户可以授权，用以下命令:</p><p>GRANT privileges ON databasename.tablename TO ‘username’@’host’ WITH GRANT OPTION;</p><p>3、设置与更改用户密码<br>命令:</p><p>SET PASSWORD FOR ‘username’@’host’ = PASSWORD(‘newpassword’);</p><p>如果是当前登陆用户用:</p><p>SET PASSWORD = PASSWORD(“newpassword”);</p><p>例子:</p><p>SET PASSWORD FOR ‘pig’@’%’ = PASSWORD(“123456”);</p><p>4、撤销用户权限<br>命令:</p><p>REVOKE privilege ON databasename.tablename FROM ‘username’@’host’;</p><p>说明:</p><p>privilege, databasename, tablename：同授权部分<br>例子:</p><p>REVOKE SELECT ON <em>.</em> FROM ‘pig’@’%’;</p><p>注意:</p><p>假如你在给用户‘pig’@’%’授权的时候是这样的（或类似的）：GRANT SELECT ON test.user TO ‘pig’@’%’，则在使用REVOKE SELECT ON <em>.</em> FROM ‘pig’@’%’;命令并不能撤销该用户对test数据库中user表的SELECT 操作。相反，如果授权使用的是GRANT SELECT ON <em>.</em> TO ‘pig’@’%’;则REVOKE SELECT ON test.user FROM ‘pig’@’%’;命令也不能撤销该用户对test数据库中user表的Select权限。</p><p>具体信息可以用命令SHOW GRANTS FOR ‘pig’@’%’; 查看。</p><p>5、删除用户<br>命令:</p><p>DROP USER ‘username’@’host’;</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一、MySQL管理&lt;br&gt;1、在phpstudy中启动MySQL（Windows系统）&lt;br&gt;步骤1：在MySQL文件中打开bin文件，然后打开命令窗口（cmd）输入：&lt;br&gt;    mysql -u root -p&lt;br&gt;步骤2：在上述步骤后会跳出一个password，然</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>php学习六</title>
