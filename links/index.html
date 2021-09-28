@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="https://demo.theme-kaze.top/img/Kaze.png">
-  <title>php学习四</title>
+  <title>Friends</title>
   
     
       <meta 
         property="og:title" 
-        content="php学习四">
+        content="Friends">
     
     
       <meta 
         property="og:url" 
-        content="http://example.com/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/index.html">
+        content="http://example.com/links/index.html">
     
     
       <meta 
@@ -36,22 +36,6 @@
         content="https://demo.theme-kaze.top/img/Kaze.png">
     
     
-    
-      <meta 
-        property="og:type" 
-        content="article">
-      <meta 
-        property="og:article:published_time" 
-        content="2021-01-31">
-      <meta 
-        property="og:article:modified_time" 
-        content="2021-02-01">
-      <meta 
-        property="og:article:author" 
-        content="theme-kaze">
-      
-        
-      
     
   
   <script>
@@ -156,8 +140,6 @@
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
   
-    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
-  
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
@@ -258,119 +240,15 @@
         <div class="container">
           <div class="columns">
             <main class="main-column">
-<article class="card card-content">
-  <header>
-    <h1 class="post-title">
-      php学习四
-    </h1>
-  </header>
-  <div class="post-meta post-show-meta">
-    <time datetime="2021-01-31T08:29:27.000Z">
-      <i 
-        class="iconfont icon-calendar" 
-        style="margin-right: 2px;">
-      </i>
-      <span>2021-01-31</span>
-    </time>
-    
-    
-      <span class="dot"></span>
-      <span>1.2k words</span>
-    
-  </div>
-  
-  </header>
-  <div 
-    id="section" 
-    class="post-content">
-    <p>一、字符串<br>1、PHP中的字符串变量<br>（1）字符串变量用于包含有字符的值</p>
-<p>（2）可以直接在函数中使用字符串，或者把它储存在变量中</p>
-<p>2、PHP 并置运算符（.）<br>作用：用于把两个字符串值连接起来</p>
-<p>3、PHP strlen（）函数<br>作用：返回字符串的长度（字节数）。</p>
-<p>4、PHP strpos（）函数<br>作用：用于在字符串内查找一个字符或一段指定的文本。<br>          如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。</p>
-<p>二、运算符<br>1、算术运算符<br>x + y        加                     x 和 y 的和<br>x - y        减                     x 和 y 的差<br>x * y        乘                     x 和 y 的积<br>x / y        除                     x 和 y 的商<br>x % y        模（除法的余数）     x 除以 y 的余数<br>-x                取反                         x取反<br>a . b        并置                     连接两个字符串 </p>
-<p>2、赋值运算符<br>x = y        x = y                      左操作数被设置为右侧表达式的值<br>x += y        x = x + y      加<br>x -= y        x = x - y                 减<br>x *= y        x = x * y      乘<br>x /= y        x = x / y      除<br>x %= y        x = x % y      模（除法的余数）<br>a .= b        a = a . b      连接两个字符串</p>
-<p>3、递增运算符<br>++ x        预递增                      x 加 1，然后返回 x<br>x ++        后递增                      返回 x，然后 x 加 1<br>– x        预递减                      x 减 1，然后返回 x<br>x –        后递减                      返回 x，然后 x 减 1</p>
-<p>4、比较运算符<br>x == y        等于                     如果 x 等于 y，则返回 true<br>x === y        绝对等于     如果 x 等于 y，且它们类型相同，则返回 true<br>x != y        不等于                     如果 x 不等于 y，则返回 true<br>x &lt;&gt; y        不等于                     如果 x 不等于 y，则返回 true<br>x !== y        绝对不等于     如果 x 不等于 y，或它们类型不相同，则返回 true<br>x &gt; y        大于                     如果 x 大于 y，则返回 true<br>x &lt; y        小于                     如果 x 小于 y，则返回 true<br>x &gt;= y        大于等于     如果 x 大于或者等于 y，则返回 true<br>x &lt;= y         小于等于     如果 x 小于或者等于 y，则返回 true     </p>
-<p>5、逻辑运算符<br>x and y        与                     如果 x 和 y 都为 true，则返回 true<br>x or y        或                     如果 x 和 y 至少有一个为 true，则返回 true<br>x xor y        异或                     如果 x 和 y 有且仅有一个为 true，则返回 true<br>x &amp;&amp; y        与                     如果 x 和 y 都为 true，则返回 true<br>x || y        或                     如果 x 和 y 至少有一个为 true，则返回 true<br>! x        非                     如果 x 不为 true，则返回 true     x=6</p>
-<p>6、数组运算符<br>x + y        集合                     x 和 y 的集合<br>x == y        相等                     如果 x 和 y 具有相同的键/值对，则返回 true<br>x === y        恒等                     如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true<br>x != y        不相等                     如果 x 不等于 y，则返回 true<br>x &lt;&gt; y        不相等                   如果 x 不等于 y，则返回 true<br>x !== y        不恒等                       如果 x 不等于 y，则返回 true</p>
-<p>7、三元运算符<br>(expr1) ? (expr2) : (expr3)<br>对 expr1 求值为 TRUE 时的值为 expr2，在 expr1 求值为 FALSE 时的值为 expr3。</p>
-<p>8、组合比较符<br>$c = $a &lt;=&gt; $b;<br>解析如下：<br>    如果 $a &gt; $b, 则 $c 的值为 1。<br>    如果 $a == $b, 则 $c 的值为 0。<br>    如果 $a &lt; $b, 则 $c 的值为 -1。</p>
-<p>9、运算符优先级<br>无        clone new      clone 和 new<br>左        [                    array()<br>右        ++ – ~ (int) (float) (string) (array) (object) (bool) @     类型和递增／递减<br>无        instanceof      类型<br>右        !                    逻辑运算符<br>左        * / %         算术运算符<br>左        + – .          算术运算符和字符串运算符<br>左        &lt;&lt; &gt;&gt;      位运算符<br>无        == != === !== &lt;&gt;     比较运算符<br>左        &amp;                    位运算符和引用<br>左        ^                    位运算符<br>左                |                   位运算符<br>左        &amp;&amp;                    逻辑运算符<br>左        ||                    逻辑运算符<br>左        ? :                    三元运算符<br>右        = += -= *= /= .= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;= =&gt;     赋值运算符<br>左        and                    逻辑运算符<br>左        xor                    逻辑运算符<br>左        or                    逻辑运算符<br>左        ,                    多处用到</p>
-<p>——————————————————————————————————————————————————<br>学习笔记补充：<br>1、intdiv()函数<br>    作用：返回值为第一个参数除于第二个参数的值并取整（向下取整）<br>2、isset()函数<br>    作用：用于检测变量是否已设置并且非NULL。如果已经使用unset（）释放了一个变量之后，再通过isset（）判断将返回FALSE。<br>3、PHP_EOL 是一个换行符，兼容更大平台。<br>4、=&gt;,-&gt;的意思和用法：<br>（1）意思:<br>（a）-&gt;是对象执行方法或取得属性用的。<br>（b）=&gt;是数组里键和值对应用的。（左侧表示键，右侧表示值）</p>
-<p>（2）用法<br>（a）=&gt; 的用法数组中用于数组的 key 和 value之间的关系例如：<br>$a = array(‘0’ =&gt; ‘1’,’2’ =&gt; ‘4’,);echo $a[‘0’];echo $a[‘2’];<br>（b）-&gt; 的用法类中用于引用类实例的方法和属性例如：<br>class Test{function add(){return $this-&gt;var++;}var $var = 0;}$a = new Test;<br>//实例化对象名称</p>
-
-  </div>
-  <div>
-    
-      <div 
-        class="post-note note-warning copyright" 
-        style="margin-top: 42px">
-        <p>
-          <span style="font-weight: bold;">作者：</span><a 
-            target="_blank" 
-            rel="nofollow noopener noreferrer" 
-            href="/about">
-            theme-kaze
-          </a>
-        </p>
-        <p>
-          <span style="font-weight: bold;">文章链接：</span><a 
-            target="_blank" 
-            rel="nofollow noopener noreferrer" 
-            href="http://example.com/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/">
-            http://example.com/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/
-          </a>
-        </p>
-        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
-      </div>
-    
-  </div>
-</article>
-<div class="nav">
-  
-    <div class="nav-item-prev">
-      <a 
-        href="/2021/02/01/php%E5%AD%A6%E4%B9%A0%E4%BA%94/" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">Prev</div>
-          
-            <div class="nav-title">php学习五 </div>
-          
-        </div>
-      </a>
-    </div>
-  
-  
-    <div class="nav-item-next">
-      <a 
-        href="/2021/01/29/php%E5%AD%A6%E4%B9%A0%E4%B8%89/" 
-        class="nav-link">
-        <div>
-          <div class="nav-label">Next</div>
-          
-            <div class="nav-title">php学习三 </div>
-          
-        </div>
-        <i class="iconfont icon-right nav-next-icon"></i>
-      </a>
-    </div>
-  
+<div class="card card-content">
+  <h1 class="widget-title">Friends</h1>
 </div>
-
-<div 
-  class="card card-content toc-card" 
-  id="mobiletoc">
-  <div class="toc-header">
-  <i 
-    class="iconfont icon-menu" 
-    style="padding-right: 2px;">
-  </i>TOC
+<div class="card card-content friend-card">
+  <ul class="links">
+    
+  </ul>
 </div>
-
-</div></main>
+</main>
             <aside class="left-column">
               
               <div class="card card-author">
@@ -409,18 +287,6 @@
                <div class="sticky-tablet">
   
   
-    <article class="display-when-two-columns spacer">
-      <div class="card card-content toc-card">
-        <div class="toc-header">
-  <i 
-    class="iconfont icon-menu" 
-    style="padding-right: 2px;">
-  </i>TOC
-</div>
-
-      </div>
-    </article>
-  
   
   <article class="card card-content categories-widget">
     <div class="categories-card">
@@ -451,21 +317,61 @@
   </article>
   
   
+    <article class="card card-content widescreen-archive archive-widget">
+      <div class="archive-card">
+  <div class="archive-card-header">
+    <i 
+      class="iconfont icon-wodebaobiao" 
+      style="padding-right: 2px;">
+    </i>Archive
+  </div>
+  <div class="archive-card-list">
+    
+    
+    
+      
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+    
+      <a 
+        href="/archives/2021" 
+        class="archive-card-list-item">
+        2021
+        <span class="archive-card-list-item-badge">6</span>
+      </a>
+    
+  </div>
+</div>
+    </article>
+  
 </div>
             </aside>
             <aside class="right-column">
               <div class="sticky-widescreen">
   
-  
-    <article class="card card-content toc-card">
-      <div class="toc-header">
-  <i 
-    class="iconfont icon-menu" 
-    style="padding-right: 2px;">
-  </i>TOC
-</div>
-
-    </article>
   
   
   <article class="card card-content">
@@ -502,6 +408,56 @@
 </div>
   </article>
   
+  
+    <article class="card card-content">
+      <div class="archive-card">
+  <div class="archive-card-header">
+    <i 
+      class="iconfont icon-wodebaobiao" 
+      style="padding-right: 2px;">
+    </i>Archive
+  </div>
+  <div class="archive-card-list">
+    
+    
+    
+      
+        
+        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+    
+      <a 
+        href="/archives/2021" 
+        class="archive-card-list-item">
+        2021
+        <span class="archive-card-list-item-badge">6</span>
+      </a>
+    
+  </div>
+</div>
+    </article>
   
 </div>
             </aside>
@@ -600,36 +556,6 @@
 </a> 
      
      
-     
-      <script>
-  var addImgLayout = function () {
-    var img = document.querySelectorAll('.post-content img')
-    var i
-    for (i = 0; i < img.length; i++) {
-      var wrapper = document.createElement('a')
-      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
-      wrapper.setAttribute('aria-label', 'illustration')
-      wrapper.style.cssText =
-        'width: 100%; display: flex; justify-content: center;'
-      if (img[i].alt) wrapper.dataset.caption = img[i].alt
-      wrapper.dataset.nolink = true
-      img[i].before(wrapper)
-      wrapper.append(img[i])
-      var divWrap = document.createElement('div')
-      divWrap.classList.add('gallery')
-      wrapper.before(divWrap)
-      divWrap.append(wrapper)
-    }
-    baguetteBox.run('.gallery')
-  }
-</script>
-<script>
-  loadScript(
-    "/js/lib/lightbox/baguetteBox.min.js",
-    addImgLayout
-  )
-</script>
- 
      
      
     <script src="/js/main.js"></script> 
