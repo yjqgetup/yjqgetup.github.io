@@ -2,44 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2021/02/03/php%E5%AD%A6%E4%B9%A0%E5%85%AD/</loc>
+    <loc>http://example.com/posts/6655/</loc>
     
-    <lastmod>2021-02-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/01/31/php%E5%AD%A6%E4%B9%A0%E5%9B%9B/</loc>
-    
-    <lastmod>2021-02-01</lastmod>
+    <lastmod>2021-09-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2021/02/01/php%E5%AD%A6%E4%B9%A0%E4%BA%94/</loc>
+    <loc>http://example.com/posts/36342/</loc>
     
-    <lastmod>2021-02-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/01/29/php%E5%AD%A6%E4%B9%A0%E4%B8%89/</loc>
-    
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-09-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2021/01/27/php%E5%AD%A6%E4%B9%A0%E4%BA%8C/</loc>
+    <loc>http://example.com/posts/44918/</loc>
     
-    <lastmod>2021-01-27</lastmod>
+    <lastmod>2021-09-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2021/01/25/php%E5%AD%A6%E4%B9%A0%E4%B8%80/</loc>
+    <loc>http://example.com/posts/34806/</loc>
     
-    <lastmod>2021-01-25</lastmod>
+    <lastmod>2021-09-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/posts/58423/</loc>
+    
+    <lastmod>2021-09-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/posts/58103/</loc>
+    
+    <lastmod>2021-09-30</lastmod>
     
   </url>
   
